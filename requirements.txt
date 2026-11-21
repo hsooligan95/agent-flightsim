@@ -1,0 +1,4 @@
+# Runtime deps come from the sibling repos FlightSim drives:
+# factory-floor-agent (the agent under test) needs langgraph/langchain-core.
+langgraph>=0.2
+langchain-core>=0.3

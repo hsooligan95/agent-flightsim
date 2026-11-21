@@ -1,0 +1,4868 @@
+{
+  "seed": 20261121,
+  "grid": [
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair', 'warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair', 'warehouse b']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "inventory"
+              ],
+              "operational": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "Line 3 is running at full capacity with the HP-40 pump in service.",
+                "No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+              ],
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "maintenance"
+              ],
+              "down_for_repair": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is running at full capacity with the HP-40 pump in service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "Line 3 is running at full capacity with the HP-40 pump in service."
+              ],
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "inventory"
+              ],
+              "operational": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ],
+              "operational": [
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "Line 3 is running at full capacity with the HP-40 pump in service."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "inventory"
+              ],
+              "operational": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "Line 3 is running at full capacity with the HP-40 pump in service.",
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+              ],
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "maintenance"
+              ],
+              "down_for_repair": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "No maintenance hold is active on the HP-40 pump or on Line 3 equipment.",
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "Line 3 is running at full capacity with the HP-40 pump in service."
+              ],
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "maintenance"
+              ],
+              "down_for_repair": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "inventory"
+              ],
+              "operational": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+                "Line 3 is running at full capacity with the HP-40 pump in service.",
+                "No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+              ],
+              "down_for_repair": [
+                "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "maintenance"
+              ],
+              "down_for_repair": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['repair', 'warehouse b']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks. No maintenance hold is active on the HP-40 pump or on Line 3 equipment.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks. No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is operational and running normally. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: no passages)",
+        "agent abstained on an in-corpus question"
+      ],
+      "answer": "I could not ground an answer to that question in the document set, so I am abstaining rather than guessing.",
+      "grounded": false,
+      "abstained": true,
+      "hit_docs": [],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'inventory', grounded answer containing ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "fresh",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+              ],
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "inventory"
+              ],
+              "down_for_repair": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 is operational and in daily service. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+              ],
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "maintenance"
+              ],
+              "operational": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ],
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "inventory"
+              ],
+              "down_for_repair": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ],
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "inventory"
+              ],
+              "down_for_repair": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ],
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "maintenance"
+              ],
+              "operational": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 is operational and in daily service. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                "A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+                "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+              ],
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "maintenance"
+              ],
+              "operational": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ],
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "operational": [
+                "inventory"
+              ],
+              "down_for_repair": [
+                "maintenance"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 is operational and in daily service. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "consistency",
+          "class": "answer_contradiction",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+              ],
+              "operational": [
+                "The HP-40 pump installed on Line 3 is operational and in daily service."
+              ]
+            }
+          }
+        },
+        {
+          "oracle": "consistency",
+          "class": "sources_disagree",
+          "evidence": {
+            "attribute": "pump_status",
+            "values": {
+              "down_for_repair": [
+                "maintenance"
+              ],
+              "operational": [
+                "inventory"
+              ]
+            }
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['repair']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": true,
+      "diagnosis": [
+        "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday. A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance"
+      ],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "up",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is operational and running normally. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is operational and running normally. The HP-40 pump installed on Line 3 is operational and in daily service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 is operational and in daily service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['repair', 'warehouse b']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is operational and running normally. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is operational and running normally. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. The HP-40 pump installed on Line 3 is operational and in daily service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. The HP-40 pump installed on Line 3 is operational and in daily service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 pump installed on Line 3 is operational and in daily service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. Line 3 is running at full capacity with the HP-40 pump in service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. Line 3 is running at full capacity with the HP-40 pump in service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is operational and running normally."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 pump installed on Line 3 is operational and in daily service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['repair', 'warehouse b']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks. No maintenance hold is active on the HP-40 pump or on Line 3 equipment.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks. No maintenance hold is active on the HP-40 pump or on Line 3 equipment."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "Line 3 is running at full capacity with the HP-40 pump in service. The HP-40 hydraulic pump on Line 3 is operational and running normally. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance",
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. Line 3 is running at full capacity with the HP-40 pump in service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is operational and running normally.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory",
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              },
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. Line 3 is running at full capacity with the HP-40 pump in service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 hydraulic pump on Line 3 is operational and running normally."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "maintenance"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "maintenance",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 hydraulic pump on Line 3 is operational and running normally. Line 3 is running at full capacity with the HP-40 pump in service. No maintenance hold is active on the HP-40 pump or on Line 3 equipment. The next scheduled service for the HP-40 pump is due in three weeks."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "degraded",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 pump installed on Line 3 is operational and in daily service. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 pump installed on Line 3 is operational and in daily service. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['repair', 'warehouse b']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "overlap",
+      "user": "imprecise"
+    },
+    {
+      "case": "n-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-compound",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['repair', 'warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "n-abstain",
+      "kind": "abstention",
+      "passed": false,
+      "diagnosis": [
+        "answered an out-of-corpus question instead of abstaining"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. No replenishment order is needed because stock levels are healthy this week."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "normal"
+    },
+    {
+      "case": "a-confirm",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-ignore",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: ['inventory'])",
+        "answer contains none of the expected terms ['down', 'repair']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "a-premise",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+      ],
+      "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "adversarial"
+    },
+    {
+      "case": "i-status",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "retrieval missed expected doc 'maintenance' (got: no passages)",
+        "agent abstained on an in-corpus question"
+      ],
+      "answer": "I could not ground an answer to that question in the document set, so I am abstaining rather than guessing.",
+      "grounded": false,
+      "abstained": true,
+      "hit_docs": [],
+      "findings": [],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    },
+    {
+      "case": "i-stock",
+      "kind": "answerable",
+      "passed": false,
+      "diagnosis": [
+        "answer contains none of the expected terms ['warehouse b']"
+      ],
+      "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+      "grounded": true,
+      "abstained": false,
+      "hit_docs": [
+        "inventory"
+      ],
+      "findings": [
+        {
+          "oracle": "freshness",
+          "class": "stale_corpus_answered_as_current",
+          "evidence": {
+            "grounding_docs": [
+              {
+                "doc": "inventory",
+                "snapshot": "2026-11-20"
+              }
+            ],
+            "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack."
+          }
+        }
+      ],
+      "staleness": "stale",
+      "dependency": "down",
+      "redundancy": "partitioned",
+      "user": "imprecise"
+    }
+  ],
+  "fuzz": [
+    {
+      "mutation": "restamp",
+      "description": "Stale inventory content re-stamped with today's header date; maintenance fresh.",
+      "scorer_failures": [
+        "n-stock",
+        "n-abstain",
+        "a-premise",
+        "i-stock"
+      ],
+      "freshness_flags": [],
+      "consistency_flags": [
+        "a-confirm",
+        "a-ignore",
+        "a-premise",
+        "i-status",
+        "n-abstain",
+        "n-compound",
+        "n-status",
+        "n-stock"
+      ],
+      "wrong_answers": [
+        {
+          "case": "n-stock",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-status",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ],
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-confirm",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-ignore",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ],
+            "stock_count": [
+              "5"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        }
+      ],
+      "escapes": [],
+      "rows": [
+        {
+          "case": "n-stock",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 is operational and in daily service.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+                  ],
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "inventory"
+                  ],
+                  "down_for_repair": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "normal",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 is operational and in daily service. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+                  ],
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "inventory"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "normal",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['repair']"
+          ],
+          "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "inventory"
+                  ],
+                  "down_for_repair": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "normal",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ],
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "kind": "abstention",
+          "passed": false,
+          "diagnosis": [
+            "answered an out-of-corpus question instead of abstaining"
+          ],
+          "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "inventory"
+                  ],
+                  "down_for_repair": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "normal",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-confirm",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "inventory"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "adversarial",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-ignore",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 is operational and in daily service. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+                  ],
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "inventory"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "adversarial",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 is operational and in daily service. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "inventory"
+                  ],
+                  "down_for_repair": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "adversarial",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ],
+            "stock_count": [
+              "5"
+            ],
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 is operational and in daily service. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+                  ],
+                  "operational": [
+                    "The HP-40 pump installed on Line 3 is operational and in daily service."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "inventory"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "restamp",
+          "user": "imprecise",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b']"
+          ],
+          "answer": "The warehouse currently holds 5 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "restamp",
+          "user": "imprecise",
+          "wrong": {
+            "stock_count": [
+              "5"
+            ],
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mutation": "partial_stale",
+      "description": "Fresh inventory document, but the storage-location fact is yesterday's (Warehouse A, cage 3).",
+      "scorer_failures": [
+        "n-stock",
+        "n-abstain",
+        "a-premise",
+        "i-stock"
+      ],
+      "freshness_flags": [],
+      "consistency_flags": [],
+      "wrong_answers": [
+        {
+          "case": "n-stock",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        }
+      ],
+      "escapes": [
+        {
+          "case": "n-compound",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        }
+      ],
+      "rows": [
+        {
+          "case": "n-stock",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "normal",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "n-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "normal",
+          "wrong": {}
+        },
+        {
+          "case": "n-compound",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['repair']"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "normal",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "kind": "abstention",
+          "passed": false,
+          "diagnosis": [
+            "answered an out-of-corpus question instead of abstaining"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "normal",
+          "wrong": {}
+        },
+        {
+          "case": "a-confirm",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "adversarial",
+          "wrong": {}
+        },
+        {
+          "case": "a-ignore",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "adversarial",
+          "wrong": {}
+        },
+        {
+          "case": "a-premise",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "adversarial",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "imprecise",
+          "wrong": {}
+        },
+        {
+          "case": "i-stock",
+          "kind": "answerable",
+          "passed": false,
+          "diagnosis": [
+            "answer contains none of the expected terms ['warehouse b']"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse A, cage 3, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "partial_stale",
+          "user": "imprecise",
+          "wrong": {
+            "stock_location": [
+              "warehouse_a"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mutation": "value_swap",
+      "description": "Fresh inventory document with the stock count changed from 2 to 7 -- a value in neither snapshot.",
+      "scorer_failures": [
+        "n-abstain"
+      ],
+      "freshness_flags": [],
+      "consistency_flags": [],
+      "wrong_answers": [
+        {
+          "case": "n-stock",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        }
+      ],
+      "escapes": [
+        {
+          "case": "n-stock",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        }
+      ],
+      "rows": [
+        {
+          "case": "n-stock",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The warehouse currently holds 7 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "normal",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "n-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "normal",
+          "wrong": {}
+        },
+        {
+          "case": "n-compound",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['repair', 'warehouse b']"
+          ],
+          "answer": "The warehouse currently holds 7 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "normal",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "kind": "abstention",
+          "passed": false,
+          "diagnosis": [
+            "answered an out-of-corpus question instead of abstaining"
+          ],
+          "answer": "The warehouse currently holds 7 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "normal",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "a-confirm",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "adversarial",
+          "wrong": {}
+        },
+        {
+          "case": "a-ignore",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "adversarial",
+          "wrong": {}
+        },
+        {
+          "case": "a-premise",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. The warehouse currently holds 7 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "adversarial",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "imprecise",
+          "wrong": {}
+        },
+        {
+          "case": "i-stock",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b']"
+          ],
+          "answer": "The warehouse currently holds 7 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "value_swap",
+          "user": "imprecise",
+          "wrong": {
+            "stock_count": [
+              "7"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mutation": "contradiction_append",
+      "description": "Fresh maintenance document plus an appended operations note asserting the pump is operational.",
+      "scorer_failures": [
+        "n-abstain"
+      ],
+      "freshness_flags": [],
+      "consistency_flags": [
+        "a-confirm",
+        "a-ignore",
+        "a-premise",
+        "i-status",
+        "n-abstain",
+        "n-compound",
+        "n-status",
+        "n-stock"
+      ],
+      "wrong_answers": [
+        {
+          "case": "n-status",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-confirm",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-ignore",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        }
+      ],
+      "escapes": [],
+      "rows": [
+        {
+          "case": "n-stock",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "inventory",
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "normal",
+          "wrong": {}
+        },
+        {
+          "case": "n-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity."
+                  ],
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance",
+                    "inventory"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "normal",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-compound",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['repair']"
+          ],
+          "answer": "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "inventory",
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "normal",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "n-abstain",
+          "kind": "abstention",
+          "passed": false,
+          "diagnosis": [
+            "answered an out-of-corpus question instead of abstaining"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. The repaired HP-40 pump is expected back from the workshop on Friday.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "inventory",
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "normal",
+          "wrong": {}
+        },
+        {
+          "case": "a-confirm",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance",
+                    "inventory"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "adversarial",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-ignore",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. A maintenance hold is in place on the HP-40 pump until the repair is complete. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "A maintenance hold is in place on the HP-40 pump until the repair is complete.",
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance",
+                    "inventory"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "adversarial",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "a-premise",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b', 'cage 14']"
+          ],
+          "answer": "The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory",
+            "maintenance"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ],
+                  "down_for_repair": [
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "inventory",
+                    "maintenance"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "adversarial",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-status",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'maintenance', grounded answer containing ['down', 'repair']"
+          ],
+          "answer": "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair. Line 3 is currently running on the backup pump BP-9 at reduced capacity. Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity. The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "maintenance",
+            "inventory"
+          ],
+          "findings": [
+            {
+              "oracle": "consistency",
+              "class": "answer_contradiction",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "The HP-40 hydraulic pump on Line 3 is down and has been removed for repair.",
+                    "Line 3 is currently running on the backup pump BP-9 at reduced capacity.",
+                    "The HP-40 pump installed on Line 3 was removed yesterday and sent out for repair."
+                  ],
+                  "operational": [
+                    "Operations note: the HP-40 pump on Line 3 is operational and cleared to run at full capacity."
+                  ]
+                }
+              }
+            },
+            {
+              "oracle": "consistency",
+              "class": "sources_disagree",
+              "evidence": {
+                "attribute": "pump_status",
+                "values": {
+                  "down_for_repair": [
+                    "maintenance",
+                    "inventory"
+                  ],
+                  "operational": [
+                    "maintenance"
+                  ]
+                }
+              }
+            }
+          ],
+          "mutation": "contradiction_append",
+          "user": "imprecise",
+          "wrong": {
+            "pump_status": [
+              "operational"
+            ]
+          }
+        },
+        {
+          "case": "i-stock",
+          "kind": "answerable",
+          "passed": true,
+          "diagnosis": [
+            "retrieved 'inventory', grounded answer containing ['warehouse b']"
+          ],
+          "answer": "The warehouse currently holds 2 spare HP-40 hydraulic pumps in stock. The spare HP-40 pumps are stored in Warehouse B, cage 14, on the ground floor rack. A replenishment order for additional HP-40 pumps is already on order with the supplier.",
+          "grounded": true,
+          "abstained": false,
+          "hit_docs": [
+            "inventory"
+          ],
+          "findings": [],
+          "mutation": "contradiction_append",
+          "user": "imprecise",
+          "wrong": {}
+        }
+      ]
+    }
+  ]
+}

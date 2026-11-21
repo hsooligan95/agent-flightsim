@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-flightsim"
+version = "0.1.0"
+description = "AgentFlightSim: a scenario engine that enumerates an agent's world (staleness x dependency x user x redundancy), with freshness and cross-source consistency oracles the per-sentence scorers miss."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[tool.setuptools.packages.find]
+include = ["flightsim*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
